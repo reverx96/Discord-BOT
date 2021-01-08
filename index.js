@@ -186,7 +186,7 @@ bot.once('ready', () => {
             break;
 
             case 'kostka':
-                const liczba = Math.random(1,6);
+                const liczba = Math.floor(Math.random() * 6) + 1; ;
                 msg.reply('Wylosowana liczba to: ' + liczba);
             break;
      }
