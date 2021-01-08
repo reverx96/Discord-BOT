@@ -17,6 +17,13 @@ const rolemembercount = require('./rolemembercount')
 // Komenda godzinki
 // Komenda Help
 // Komenda Zwolnij pracownika (zabranie rang i dodanie obywatela)
+// komenda do WSR
+// komenda do RRU
+// komenda do MR
+// komenda do AMS
+
+        // Możliwe do zrobienia
+
 
 
 bot.once('ready', () => {
@@ -71,13 +78,6 @@ bot.once('ready', () => {
                 channel1.send(`<@&668143898086080560> \n Przypominamy, że godzinki wypisujecie do Niedzieli godz 20:00 \n Wszelkie nie wpisane godziny do tego czasu przepadają`);
             break;
 
-            case 'hexemail':
-                if(!msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
-                const datachannel3 = '762777229259440130'; //ID kanalu ogloszenia
-                const channel3 = bot.channels.cache.get(datachannel3);
-                channel3.send(`<@&675728757209825290> \n Proszę o uzupełnienie danych na kanale #e-mail-hex`);
-            break;
-
             case 'zwolnij':
                 if(!msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
                 if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
@@ -116,6 +116,75 @@ bot.once('ready', () => {
                 member.roles.remove(role3);
                 break;
 
+                case 'WSR':
+                    if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
+                    if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
+    
+                    let memberwsr = msg.mentions.members.first(); // wspomnienie użytkownika
+    
+                    const datachannelwsr = '762799020971130921'; //ID kanalu WSR
+                    const channelwsr = bot.channels.cache.get(datachannelwsr);
+                    channelwsr.send(`${`<@`+memberwsr+'> '}- Gratuluję zdania egzaminu teoretycznego i praktycznego. Z dniem dzisiejszym oficjalnie witam w jednostce Water Search & Rescue`);
+                    
+                    var rolewsr = member.guild.roles.cache.find(role => role.name === "Water Search & Rescue");
+                    var rolenurek = member.guild.roles.cache.find(role => role.name === "Licencja Nurka");
+                    var rolesternik = member.guild.roles.cache.find(role => role.name === "Licencja Sternicza");
+                    memberwsr.roles.add(rolewsr);
+                    memberwsr.roles.add(rolenurek);
+                    memberwsr.roles.add(rolesternik);
+
+                    break;
+
+                    case 'MR':
+                        if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
+                        if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
+        
+                        let membermr = msg.mentions.members.first(); // wspomnienie użytkownika
+        
+                        const datachannelmr = '762798946224832532'; //ID kanalu MR
+                        const channelmr = bot.channels.cache.get(datachannelmr);
+                        channelmr.send(`${`<@`+membermr+'> '} gratuluję przejścia pozytywnie egzaminu z teorii oraz praktyki, tym samy zdobycia licencji Patrol Unit.`);
+                        
+                        var rolemr = member.guild.roles.cache.find(role => role.name === "Mountain Rescue");
+                        var rolepu = member.guild.roles.cache.find(role => role.name === "Patrol Unit");
+                        membermr.roles.add(rolemr);
+                        membermr.roles.add(rolepu);
+    
+                        break;
+
+                        case 'AMS':
+                            if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
+                            if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
+            
+                            let memberams = msg.mentions.members.first(); // wspomnienie użytkownika
+            
+                            const datachannelams = '763081821104898149'; //ID kanalu AMS
+                            const channelams = bot.channels.cache.get(datachannelams);
+                            channelams.send(`${`<@`+memberams+'> '} -  Gratuluje dołączenia do jednostki AMS oraz uzyskania Licencji Pilota! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
+                            
+                            var roleams = member.guild.roles.cache.find(role => role.name === "Air Medical Services");
+                            var rolepilot = member.guild.roles.cache.find(role => role.name === "Licencja Pilota");
+                            memberams.roles.add(roleams);
+                            memberams.roles.add(rolepilot);
+        
+                            break;
+
+                            case 'RRU':
+                                if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
+                                if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
+                
+                                let memberrru = msg.mentions.members.first(); // wspomnienie użytkownika
+                
+                                const datachannelrru = '762801320742092800'; //ID kanalu RRU
+                                const channelrru = bot.channels.cache.get(datachannelrru);
+                                channelrru.send(`${`<@`+memberrru+'> '} - Gratuluje dołączenia do jednostki RRU! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
+                                
+                                var roleams = member.guild.roles.cache.find(role => role.name === "Air Medical Services");
+                                var rolepilot = member.guild.roles.cache.find(role => role.name === "Licencja Pilota");
+                                memberrru.roles.add(roleams);
+                                memberrru.roles.add(rolepilot);
+            
+                                break;
      }
 
  })
