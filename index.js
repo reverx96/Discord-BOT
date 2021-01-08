@@ -116,82 +116,81 @@ bot.once('ready', () => {
                 member.roles.remove(role3);
                 break;
 
-                case 'WSR':
-                    if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
-                    if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
+            case 'WSR':
+                if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
+                if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
     
-                    let memberwsr = msg.mentions.members.first(); // wspomnienie użytkownika
+                let memberwsr = msg.mentions.members.first(); // wspomnienie użytkownika
     
-                    const datachannelwsr = '762799020971130921'; //ID kanalu WSR
-                    const channelwsr = bot.channels.cache.get(datachannelwsr);
-                    channelwsr.send(`${`<@`+memberwsr+'> '}- Gratuluję zdania egzaminu teoretycznego i praktycznego. Z dniem dzisiejszym oficjalnie witam w jednostce Water Search & Rescue`);
+                const datachannelwsr = '762799020971130921'; //ID kanalu WSR
+                const channelwsr = bot.channels.cache.get(datachannelwsr);
+                channelwsr.send(`${`<@`+memberwsr+'> '}- Gratuluję zdania egzaminu teoretycznego i praktycznego. Z dniem dzisiejszym oficjalnie witam w jednostce Water Search & Rescue`);
                     
-                    var rolewsr = memberwsr.guild.roles.cache.find(role => role.name === "Water Search & Rescue");
-                    var rolenurek = memberwsr.guild.roles.cache.find(role => role.name === "Licencja Nurka");
-                    var rolesternik = memberwsr.guild.roles.cache.find(role => role.name === "Licencja Sternicza");
-                    memberwsr.roles.add(rolewsr);
-                    memberwsr.roles.add(rolenurek);
-                    memberwsr.roles.add(rolesternik);
+                var rolewsr = memberwsr.guild.roles.cache.find(role => role.name === "Water Search & Rescue");
+                var rolenurek = memberwsr.guild.roles.cache.find(role => role.name === "Licencja Nurka");
+                var rolesternik = memberwsr.guild.roles.cache.find(role => role.name === "Licencja Sternicza");
+                memberwsr.roles.add(rolewsr);
+                memberwsr.roles.add(rolenurek);
+                memberwsr.roles.add(rolesternik);
 
-                    break;
+            break;
 
-                    case 'MR':
-                        if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
-                        if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
+            case 'MR':
+                if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
+                if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
         
-                        let membermr = msg.mentions.members.first(); // wspomnienie użytkownika
+                let membermr = msg.mentions.members.first(); // wspomnienie użytkownika
         
-                        const datachannelmr = '762798946224832532'; //ID kanalu MR
-                        const channelmr = bot.channels.cache.get(datachannelmr);
-                        channelmr.send(`${`<@`+membermr+'> '} gratuluję przejścia pozytywnie egzaminu z teorii oraz praktyki, tym samy zdobycia licencji Patrol Unit.`);
-                        
-                        var rolemr = membermr.guild.roles.cache.find(role => role.name === "Mountain Rescue");
-                        var rolepu = membermr.guild.roles.cache.find(role => role.name === "Patrol Unit");
-                        membermr.roles.add(rolemr);
-                        membermr.roles.add(rolepu);
+                const datachannelmr = '762798946224832532'; //ID kanalu MR
+                const channelmr = bot.channels.cache.get(datachannelmr);
+                channelmr.send(`${`<@`+membermr+'> '} gratuluję przejścia pozytywnie egzaminu z teorii oraz praktyki, tym samy zdobycia licencji Patrol Unit.`);
+                      
+                var rolemr = membermr.guild.roles.cache.find(role => role.name === "Mountain Rescue");
+                var rolepu = membermr.guild.roles.cache.find(role => role.name === "Patrol Unit");
+                membermr.roles.add(rolemr);
+                membermr.roles.add(rolepu);
     
-                        break;
+            break;
 
-                        case 'AMS':
-                            if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
-                            if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
+            case 'AMS':
+                if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
+                if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
             
-                            let memberams = msg.mentions.members.first(); // wspomnienie użytkownika
+                let memberams = msg.mentions.members.first(); // wspomnienie użytkownika
             
-                            const datachannelams = '763081821104898149'; //ID kanalu AMS
-                            const channelams = bot.channels.cache.get(datachannelams);
-                            channelams.send(`${`<@`+memberams+'> '} -  Gratuluje dołączenia do jednostki AMS oraz uzyskania Licencji Pilota! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
+                const datachannelams = '763081821104898149'; //ID kanalu AMS
+                const channelams = bot.channels.cache.get(datachannelams);
+                channelams.send(`${`<@`+memberams+'> '} -  Gratuluje dołączenia do jednostki AMS oraz uzyskania Licencji Pilota! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
                             
-                            var roleams = memberams.guild.roles.cache.find(role => role.name === "Air Medical Services");
-                            var rolepilot = memberams.guild.roles.cache.find(role => role.name === "Licencja Pilota");
-                            memberams.roles.add(roleams);
-                            memberams.roles.add(rolepilot);
+                var roleams = memberams.guild.roles.cache.find(role => role.name === "Air Medical Services");
+                var rolepilot = memberams.guild.roles.cache.find(role => role.name === "Licencja Pilota");
+                memberams.roles.add(roleams);
+                memberams.roles.add(rolepilot);
         
-                            break;
+            break;
 
-                            case 'RRU':
-                                if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
-                                if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
+            case 'RRU':
+                if(!msg.member.roles.cache.find(role => role.name === "Training Division") && !msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
+                if(!args[1]) return msg.reply('Błąd! Nie spingowano użytkownika')
                 
-                                let memberrru = msg.mentions.members.first(); // wspomnienie użytkownika
+                let memberrru = msg.mentions.members.first(); // wspomnienie użytkownika
                 
-                                const datachannelrru = '762801320742092800'; //ID kanalu RRU
-                                const channelrru = bot.channels.cache.get(datachannelrru);
-                                channelrru.send(`${`<@`+memberrru+'> '} - Gratuluje dołączenia do jednostki RRU! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
+                const datachannelrru = '762801320742092800'; //ID kanalu RRU
+                const channelrru = bot.channels.cache.get(datachannelrru);
+                channelrru.send(`${`<@`+memberrru+'> '} - Gratuluje dołączenia do jednostki RRU! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
                                 
-                                var rolerru = memberrru.guild.roles.cache.find(role => role.name === "Rapid Respons");
-                                memberrru.roles.add(rolerru);
+                var rolerru = memberrru.guild.roles.cache.find(role => role.name === "Rapid Respons");
+                memberrru.roles.add(rolerru);
 
             
-                                break;
+            break;
+
+            case 'kostka':
+                const liczba = Math.random(1,6);
+                msg.reply('Wylosowana liczba to: ' + liczba);
+            break;
      }
 
  })
-
- 
-
-
-
-
 
  bot.login(token);
