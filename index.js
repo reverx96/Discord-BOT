@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'Nzk2Mzg5NTIxNDkxMDk5Njg4.X_XNig.LrgRnPgQNFv-fphM3RB_fONGeTA';
+const token = 'Nzk2Mzg5NTIxNDkxMDk5Njg4.X_XNig.3u8daSBHLyaBKoCrl1tpx-ZZ-q8';
 const PREFIX = '#';
 const memberCounter = require('./counter/member_counter');
 const currentdata = require('./currentdata')
 const rolemembercount = require('./rolemembercount')
-
         // Funkcjonalność BOTA
 // #ping - sprawdzanie czy bot działa
 // #clear [val]  - usuwanie danej ilości wiadomości
