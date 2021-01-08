@@ -126,9 +126,9 @@ bot.once('ready', () => {
                     const channelwsr = bot.channels.cache.get(datachannelwsr);
                     channelwsr.send(`${`<@`+memberwsr+'> '}- Gratuluję zdania egzaminu teoretycznego i praktycznego. Z dniem dzisiejszym oficjalnie witam w jednostce Water Search & Rescue`);
                     
-                    var rolewsr = member.guild.roles.cache.find(role => role.name === "Water Search & Rescue");
-                    var rolenurek = member.guild.roles.cache.find(role => role.name === "Licencja Nurka");
-                    var rolesternik = member.guild.roles.cache.find(role => role.name === "Licencja Sternicza");
+                    var rolewsr = memberwsr.guild.roles.cache.find(role => role.name === "Water Search & Rescue");
+                    var rolenurek = memberwsr.guild.roles.cache.find(role => role.name === "Licencja Nurka");
+                    var rolesternik = memberwsr.guild.roles.cache.find(role => role.name === "Licencja Sternicza");
                     memberwsr.roles.add(rolewsr);
                     memberwsr.roles.add(rolenurek);
                     memberwsr.roles.add(rolesternik);
@@ -145,8 +145,8 @@ bot.once('ready', () => {
                         const channelmr = bot.channels.cache.get(datachannelmr);
                         channelmr.send(`${`<@`+membermr+'> '} gratuluję przejścia pozytywnie egzaminu z teorii oraz praktyki, tym samy zdobycia licencji Patrol Unit.`);
                         
-                        var rolemr = member.guild.roles.cache.find(role => role.name === "Mountain Rescue");
-                        var rolepu = member.guild.roles.cache.find(role => role.name === "Patrol Unit");
+                        var rolemr = membermr.guild.roles.cache.find(role => role.name === "Mountain Rescue");
+                        var rolepu = membermr.guild.roles.cache.find(role => role.name === "Patrol Unit");
                         membermr.roles.add(rolemr);
                         membermr.roles.add(rolepu);
     
@@ -162,8 +162,8 @@ bot.once('ready', () => {
                             const channelams = bot.channels.cache.get(datachannelams);
                             channelams.send(`${`<@`+memberams+'> '} -  Gratuluje dołączenia do jednostki AMS oraz uzyskania Licencji Pilota! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
                             
-                            var roleams = member.guild.roles.cache.find(role => role.name === "Air Medical Services");
-                            var rolepilot = member.guild.roles.cache.find(role => role.name === "Licencja Pilota");
+                            var roleams = memberams.guild.roles.cache.find(role => role.name === "Air Medical Services");
+                            var rolepilot = memberams.guild.roles.cache.find(role => role.name === "Licencja Pilota");
                             memberams.roles.add(roleams);
                             memberams.roles.add(rolepilot);
         
@@ -179,8 +179,8 @@ bot.once('ready', () => {
                                 const channelrru = bot.channels.cache.get(datachannelrru);
                                 channelrru.send(`${`<@`+memberrru+'> '} - Gratuluje dołączenia do jednostki RRU! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
                                 
-                                var roleams = member.guild.roles.cache.find(role => role.name === "Air Medical Services");
-                                var rolepilot = member.guild.roles.cache.find(role => role.name === "Licencja Pilota");
+                                var roleams = memberrru.guild.roles.cache.find(role => role.name === "Air Medical Services");
+                                var rolepilot = memberrru.guild.roles.cache.find(role => role.name === "Licencja Pilota");
                                 memberrru.roles.add(roleams);
                                 memberrru.roles.add(rolepilot);
             
