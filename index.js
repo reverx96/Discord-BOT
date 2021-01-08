@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-const token = 'Nzk2Mzg5NTIxNDkxMDk5Njg4.X_XNig.ypzSHADxK_bgO-xN5KajA14yu4M';
+const token = 'Nzk2Mzg5NTIxNDkxMDk5Njg4.X_XNig.LrgRnPgQNFv-fphM3RB_fONGeTA';
 const PREFIX = '#';
-
 const memberCounter = require('./counter/member_counter');
 const currentdata = require('./currentdata')
 const rolemembercount = require('./rolemembercount')
