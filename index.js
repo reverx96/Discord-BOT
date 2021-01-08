@@ -179,10 +179,9 @@ bot.once('ready', () => {
                                 const channelrru = bot.channels.cache.get(datachannelrru);
                                 channelrru.send(`${`<@`+memberrru+'> '} - Gratuluje dołączenia do jednostki RRU! Tym samym zaliczenia egzaminu z teorii oraz praktyki!`);
                                 
-                                var roleams = memberrru.guild.roles.cache.find(role => role.name === "Air Medical Services");
-                                var rolepilot = memberrru.guild.roles.cache.find(role => role.name === "Licencja Pilota");
-                                memberrru.roles.add(roleams);
-                                memberrru.roles.add(rolepilot);
+                                var rolerru = memberrru.guild.roles.cache.find(role => role.name === "Rapid Respons");
+                                memberrru.roles.add(rolerru);
+
             
                                 break;
      }
