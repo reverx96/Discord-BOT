@@ -107,6 +107,11 @@ bot.once('ready', () => {
                 const channel2 = bot.channels.cache.get(datachannel2);
                 channel2.send(`${`<@`+member+'> '}Twoje podanie zostało zaakceptowane. Proszę ustawić sobie Imię oraz Nazwisko IC jako pseudonim na DC. Prosimy się zgłosić na szpital do zarządu w celu wdrożenia w dalsze procedury.`);
                 
+                const datachannel21 = '677418037825110023'; //ID kanalu med OOC
+                const channel21 = bot.channels.cache.get(datachannel21);
+                channel21.send(`${`<@`+member+'> '}Twoje podanie zostało zaakceptowane. Proszę ustawić sobie Imię oraz Nazwisko IC jako pseudonim na DC oraz wypisać dane na kanale #e-mail-hex. Prosimy się zgłosić na szpital do zarządu w celu wdrożenia w dalsze procedury.`);
+                
+
                 var role1 = member.guild.roles.cache.find(role => role.name === "EMT");
                 var role2 = member.guild.roles.cache.find(role => role.name === "Recruit");
                 var role3 = member.guild.roles.cache.find(role => role.name === "Obywatel");
