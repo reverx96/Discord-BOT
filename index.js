@@ -68,7 +68,7 @@ bot.once('ready', () => {
                 if(!msg.member.roles.cache.find(role => role.name === "EMT Board") && !msg.member.roles.cache.find(role => role.name === "BOT")) return msg.reply('Nie masz uprawnień do tej komendy')
                 const datachannel = '762777229259440130'; //ID kanalu ogloszenia
                 const channel = bot.channels.cache.get(datachannel);
-                channel.send(`<@&668143898086080560> \n Zebranie w tą niedzielę o 21:00 \n Zbiórka 20:50 pod Eclipse \n Galówka i poza służbą \n Usprawiedliwienia nieobecności do 101-104`);
+                channel.send(`<@&668143898086080560> \n Zebranie w tą niedzielę o 21:00 \n Zbiórka 20:50 pod Eclipse \n Galówka i poza służbą \n Usprawiedliwienia nieobecności do 101-102 lub 201-202`);
             break;
 
             case 'godzinki':
